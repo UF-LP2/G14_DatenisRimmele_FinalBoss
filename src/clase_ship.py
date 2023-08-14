@@ -9,10 +9,17 @@ class Ship(object):
         
     def calcular_peso(self):
         peso = self.draft - self.crew * 1.5
-        if peso < 0:
+        if peso <= 0:
             raise "El barco supera se limite de peso"
         else:
-            print("El pseo del barco es optimo")
-        return peso
-    
+            return peso
 
+    def is_worth_it(self):
+        try:
+            valor = Ship.calcular_peso(self)
+            if 0 < valor <= 20:
+                print('El barco no merece ser saqueado')
+            else:
+                print('El barco merece ser saqueado')
+        except Exception as e:
+            print("Excepcion capturada:" + str(e))
