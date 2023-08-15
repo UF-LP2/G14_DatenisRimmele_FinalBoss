@@ -1,5 +1,6 @@
 from src.clase_ship import Ship
 
+
 class Cargo(Ship):
     def __init__(self, cargo, quality, draft, crew):
         self.cargo = cargo
