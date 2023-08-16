@@ -14,7 +14,7 @@ def verifico(num):
 
 def main() -> None:
     ship = []
-    with open("ships.csv", newline='') as csvfile:
+    with open("caca.csv", newline='') as csvfile:
         lector = csv.reader(csvfile, delimiter=',', quotechar='|')
         # next(csvfile, None)
         for row in lector:
@@ -38,7 +38,7 @@ def main() -> None:
 
         for i in range(len(ship)):
             # print(str(ship[i]))
-            ship[i].is_worth_it()
+            valor = ship[i].is_worth_it()
 
 
 if __name__ == "__main__":
