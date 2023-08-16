@@ -3,9 +3,11 @@ from src.clase_ship import Ship
 
 class Cargo(Ship):
     def __init__(self, cargo, quality, draft, crew):
-        self.cargo = float(cargo)
-        self.quality = float(quality)
-        Ship.__init__(self, draft, crew)
+        if float(quality) == (1 or 0.5 or 0.25):
+            self.quality = float(quality)
+            self.cargo = float(cargo)
+            Ship.__init__(self, draft, crew)
+
         # print("Se creo el Cargo")
 
     def peso(self):
@@ -28,8 +30,10 @@ class Cargo(Ship):
             # print(f"Peso botin: {peso}")
             if peso > 20:
                 print("¡El cargo tiene un gran botin!")
+                return peso
             else:
                 print("El cargo no merece la pena :(")
+                return peso
         except Exception as e:
             print(str(e))
 

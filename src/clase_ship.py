@@ -19,7 +19,9 @@ class Ship(object):
             peso = self.peso()
             if peso < 20:
                 print(f"El crucero no merece la pena :(")
+                return peso
             else:
                 print("¡El crucero tiene un gran botin!")
+                return peso
         except Exception as e:
             print(str(e))
