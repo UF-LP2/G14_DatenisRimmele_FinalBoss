@@ -19,8 +19,10 @@ class Cruise(Ship):
             # print(f"Peso botin: {peso}")
             if peso > 20:
                 print("¡El crucero tiene un gran botin!")
+                return peso
             else:
                 print("El crucero no merece la pena :(")
+                return peso
         except Exception as e:
             print(str(e))
 
